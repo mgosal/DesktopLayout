@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1208,909" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:vp="clr-namespace:Vanara.PInvoke;assembly=Vanara.PInvoke.Shared" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1208,869" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:vp="clr-namespace:Vanara.PInvoke;assembly=Vanara.PInvoke.Shared" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -84,7 +84,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="478,704" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="376,503" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="vp:HWND" Name="hwnd" />
       <Variable x:TypeArguments="vp:RECT" Name="r">
@@ -101,7 +101,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="1000" DisplayName="Click 'Pane  Ribbon'" sap:VirtualizedContainerService.HintSize="436,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="1000" DisplayName="Click 'Pane  Ribbon'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -123,28 +123,7 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:GetActiveWindow DisplayName="Get Active Window" sap:VirtualizedContainerService.HintSize="436,161" sap2010:WorkflowViewState.IdRef="GetActiveWindow_2">
-      <ui:GetActiveWindow.ApplicationWindow>
-        <OutArgument x:TypeArguments="ui:Window">
-          <mca:CSharpReference x:TypeArguments="ui:Window" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">w</mca:CSharpReference>
-        </OutArgument>
-      </ui:GetActiveWindow.ApplicationWindow>
-      <ui:GetActiveWindow.Body>
-        <ActivityAction x:TypeArguments="x:Object">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_4">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </Sequence>
-        </ActivityAction>
-      </ui:GetActiveWindow.Body>
-    </ui:GetActiveWindow>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Vanara.PInvoke.User32.GetWindowRect(wnd,out r);&#xD;&#xA;var wplacement  = new Vanara.PInvoke.User32.WINDOWPLACEMENT();&#xD;&#xA;Vanara.PInvoke.User32.GetWindowPlacement(wnd,ref wplacement);&#xD;&#xA;placement = wplacement.showCmd.ToString();" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="436,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Vanara.PInvoke.User32.GetWindowRect(wnd,out r);&#xA;var wplacement  = new Vanara.PInvoke.User32.WINDOWPLACEMENT();&#xA;Vanara.PInvoke.User32.GetWindowPlacement(wnd,ref wplacement);&#xA;placement = wplacement.showCmd.ToString();" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
       <ui:InvokeCode.Arguments>
         <InOutArgument x:TypeArguments="vp:RECT" x:Key="r">
           <mca:CSharpReference x:TypeArguments="vp:RECT" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">r</mca:CSharpReference>
@@ -157,7 +136,7 @@
         </InArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="436,61" sap2010:WorkflowViewState.IdRef="WriteLine_2">
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_2">
       <InArgument x:TypeArguments="x:String">
         <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">r.left.ToString()+windowplacement</mca:CSharpValue>
       </InArgument>

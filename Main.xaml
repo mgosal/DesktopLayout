@@ -138,7 +138,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
-    <Assign sap:VirtualizedContainerService.HintSize="562,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+    <Assign DisplayName="Get a hash of the display configutation" sap:VirtualizedContainerService.HintSize="562,60" sap2010:WorkflowViewState.IdRef="Assign_6">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">
           <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">monitorConfig</mca:CSharpReference>
@@ -257,7 +257,7 @@
                 </InArgument>
               </Assign.Value>
             </Assign>
-            <ui:InvokeCode ContinueOnError="{x:Null}" Code="Vanara.PInvoke.User32.GetWindowRect(hwnd,out r);&#xD;&#xA;var wplacement  = new Vanara.PInvoke.User32.WINDOWPLACEMENT();&#xD;&#xA;Vanara.PInvoke.User32.GetWindowPlacement(hwnd,ref wplacement);&#xD;&#xA;placement = wplacement.showCmd.ToString();&#xD;&#xA;s = JsonConvert.SerializeObject(psi,&#xD;&#xA;                new JsonSerializerSettings() {ContractResolver = new SerializableExpandableContractResolver()});" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="484,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+            <ui:InvokeCode ContinueOnError="{x:Null}" Code="Vanara.PInvoke.User32.GetWindowRect(hwnd,out r);&#xD;&#xA;var wplacement  = new Vanara.PInvoke.User32.WINDOWPLACEMENT();&#xD;&#xA;Vanara.PInvoke.User32.GetWindowPlacement(hwnd,ref wplacement);&#xD;&#xA;placement = wplacement.showCmd.ToString();&#xD;&#xA;s = JsonConvert.SerializeObject(psi,new JsonSerializerSettings() {ContractResolver = new SerializableExpandableContractResolver()});" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="484,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
               <ui:InvokeCode.Arguments>
                 <InOutArgument x:TypeArguments="vp:RECT" x:Key="r">
                   <mca:CSharpReference x:TypeArguments="vp:RECT" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">r</mca:CSharpReference>
